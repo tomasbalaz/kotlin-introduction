@@ -24,6 +24,13 @@ fun main() {
     //5th option of the message concatenation
     val msg = "Name ${name.uppercase()},  Age ${age + 1}"
 
+    val email = """
+        Hello %s
+            How 
+        Are you
+    """.trimIndent()
+
+    println(email.format("Ana"))
 
     println(msg)
 }

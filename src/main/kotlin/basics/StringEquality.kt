@@ -1,3 +1,5 @@
+package basics
+
 fun main() {
     val name1 = "Tomas"
 

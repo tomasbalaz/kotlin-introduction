@@ -1,3 +1,5 @@
+package basics
+
 fun main() {
 
     val sum = 10 + 10

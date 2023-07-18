@@ -1,4 +1,4 @@
-
+package basics
 // 'Pi' has been known before code execution - difference between val PI = 3.14
 // -> static final -> Java Example
 const val PI = 3.14

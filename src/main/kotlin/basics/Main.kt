@@ -1,4 +1,4 @@
-//fun main(args: Array<String>) {
+package basics//fun main(args: Array<String>) {
 //    println("Hello World!")
 //
 //    // how to print 1st argument

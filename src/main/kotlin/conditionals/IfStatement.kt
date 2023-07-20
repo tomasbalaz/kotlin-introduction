@@ -8,6 +8,8 @@ fun main() {
 
     if(n1 > n2) {
         println(":)")
+    } else if (n1 == 100) {
+
     } else {
         println(":(")
     }

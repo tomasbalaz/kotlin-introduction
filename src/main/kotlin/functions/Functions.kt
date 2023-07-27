@@ -2,7 +2,7 @@ package functions
 
 fun main() {
     println("hello".uppercase())
-    greet("Tomas", 22)
+    greet(age = 23, name = "Tomas")
     greet("Alex", 16)
     greet("Bob", 11)
 }

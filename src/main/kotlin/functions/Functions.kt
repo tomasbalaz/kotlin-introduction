@@ -26,13 +26,14 @@ fun foo(
 fun greet(name: String, age: Int = -1) {
     println("Hello $name")
     if(age == -1) {
-        println("Age not provided")
+        println("Age not provided\n")
+        return
     }
     if(age >= 16) {
-        println("$name is an adult")
+        println("$name $age - is an adult")
     }
     else {
-        println("$name not an adult")
+        println("$name $age - not an adult")
     }
     println()
 }

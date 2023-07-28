@@ -5,17 +5,24 @@ fun main() {
     greet(age = 23, name = "Tomas")
     greet("Alex")
     greet("Bob", 11)
-    foo(bar = {
+    functionsAsArguments(bar = {
         println("bar as a function")
 
     })
-    foo {
+    functionsAsArguments {
         println("bar as a function 2")
     }
-    foo()
+    functionsAsArguments()
+
+    val double = double(10)
+    println(double)
 }
 
-fun foo(
+fun double(n: Int): Int {
+    return n * 2
+}
+
+fun functionsAsArguments(
     name: String = "",
     bar: () -> Unit = {}) {
 

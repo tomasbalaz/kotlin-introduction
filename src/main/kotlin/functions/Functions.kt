@@ -16,6 +16,12 @@ fun main() {
 
     val double = double(10)
     println(double)
+
+    val (v1, v2) = twoValues()
+    println("$v1 $v2")
+
+    val (t1, t2, t3) =  threeValues()
+    println("$t1 $t2 $t3")
 }
 
 //fun double(n: Int): Int {
@@ -25,6 +31,24 @@ fun main() {
 // fun double(n: Int): Int = n * 2
 
 fun double(n: Int) = n * 2
+
+//fun twoValues(): Pair<String, Int> {
+//    return "Tomas" to 20
+//}
+
+//fun twoValues(): Pair<String, Int> = "Tomas" to 20
+fun twoValues(): Pair<String, Int> = Pair("Tomas", 20)
+
+//fun threeValues(): Triple<String, Int, Char> {
+//    return Triple(
+//        "Tomas",
+//        20,
+//        'Z')
+//}
+
+
+fun threeValues(): Triple<String, Int, Char>  = Triple("Tomas", 20, 'Z')
+
 
 fun functionsAsArguments(
     name: String = "",

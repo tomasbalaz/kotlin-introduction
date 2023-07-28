@@ -18,9 +18,11 @@ fun main() {
     println(double)
 }
 
-fun double(n: Int): Int {
-    return n * 2
-}
+//fun double(n: Int): Int {
+//    return n * 2
+//}
+
+fun double(n: Int): Int = n * 2
 
 fun functionsAsArguments(
     name: String = "",

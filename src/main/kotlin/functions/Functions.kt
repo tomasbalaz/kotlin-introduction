@@ -22,7 +22,9 @@ fun main() {
 //    return n * 2
 //}
 
-fun double(n: Int): Int = n * 2
+// fun double(n: Int): Int = n * 2
+
+fun double(n: Int) = n * 2
 
 fun functionsAsArguments(
     name: String = "",

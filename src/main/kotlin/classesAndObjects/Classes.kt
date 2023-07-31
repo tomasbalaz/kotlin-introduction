@@ -4,6 +4,7 @@ fun main() {
     val tv = SmartDevice()
     tv.brand = "Samsung"
     tv.price = 10000.0
+    tv.turnOff()
 
     val phone = SmartDevice()
     phone.brand = "Apple"
@@ -11,6 +12,10 @@ fun main() {
 
     println("${tv.brand} ${tv.price}")
     println("${phone.brand} ${phone.price}")
+    phone.turnOff()
+    phone.getDeviceState()
+    phone.turnOn()
+    phone.getDeviceState()
 }
 
 // blueprint for objects
@@ -23,7 +28,22 @@ class SmartDevice {
         }
 
     var price: Double = 0.0
-        //behaviours functions
         get() = field
 
+    var isSwitchedOn:Boolean = false
+
+    //behaviours functions
+    fun turnOn() {
+        isSwitchedOn = true
+        println("${brand} is switching on")
+    }
+
+    fun turnOff() {
+        isSwitchedOn = false
+        println("${brand} is switching off")
+    }
+
+    fun getDeviceState() {
+        println("${brand} is on: $isSwitchedOn")
+    }
 }

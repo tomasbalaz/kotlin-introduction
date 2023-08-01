@@ -18,6 +18,9 @@ fun main() {
     phone.getDeviceState()
     phone.turnOn()
     phone.getDeviceState()
+
+    val laptop = SmartDevice()
+    println("${laptop.brand} ${laptop.price}")
 }
 
 // blueprint for objects
@@ -28,6 +31,13 @@ class SmartDevice(
     var isSwitchedOn: Boolean = false
 
 ) {
+    constructor(): this("", 0.0)
+
+    constructor(
+        brand: String
+    ): this(brand, 0.0)
+
+
     //behaviours functions
     fun turnOn() {
         isSwitchedOn = true

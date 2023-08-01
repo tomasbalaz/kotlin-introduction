@@ -21,6 +21,7 @@ fun main() {
 
     val laptop = SmartDevice()
     println("${laptop.brand} ${laptop.price}")
+    println(laptop)
 }
 
 // blueprint for objects
@@ -51,5 +52,9 @@ class SmartDevice(
 
     fun getDeviceState() {
         println("${brand} is on: $isSwitchedOn")
+    }
+
+    override fun toString(): String {
+        return "SmartDevice(brand='$brand', price=$price, isSwitchedOn=$isSwitchedOn)"
     }
 }

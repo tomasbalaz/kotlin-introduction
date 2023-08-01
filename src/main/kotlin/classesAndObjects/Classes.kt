@@ -1,14 +1,16 @@
 package classesAndObjects
 
 fun main() {
-    val tv = SmartDevice()
-    tv.brand = "Samsung"
-    tv.price = 10000.0
+    val tv = SmartDevice(
+        "Samsung",
+        10000.0
+    )
     tv.turnOff()
 
-    val phone = SmartDevice()
-    phone.brand = "Apple"
-    phone.price = 1200.00
+    val phone = SmartDevice(
+        "Apple",
+        1200.0
+    )
 
     println("${tv.brand} ${tv.price}")
     println("${phone.brand} ${phone.price}")
@@ -19,19 +21,13 @@ fun main() {
 }
 
 // blueprint for objects
-class SmartDevice {
+class SmartDevice(
     //properties variables val or var
-    var brand: String = ""
-        get() = field
-        set(value) {
-            field = value
-        }
+    var brand: String,
+    var price: Double,
+    var isSwitchedOn: Boolean = false
 
-    var price: Double = 0.0
-        get() = field
-
-    var isSwitchedOn:Boolean = false
-
+) {
     //behaviours functions
     fun turnOn() {
         isSwitchedOn = true

@@ -5,6 +5,18 @@ fun main() {
         "Samsung",
         10000.0
     )
+
+    val tv2 = SmartDevice(
+        "Samsung",
+        10000.0
+    )
+
+    //comparing object properties via object.equals
+    println(" == ${tv == tv2}")
+
+    //comparing memory location
+    println(" === ${tv === tv2}")
+
     tv.turnOff()
 
     val phone = SmartDevice(
@@ -57,4 +69,26 @@ class SmartDevice(
     override fun toString(): String {
         return "SmartDevice(brand='$brand', price=$price, isSwitchedOn=$isSwitchedOn)"
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as SmartDevice
+
+        if (brand != other.brand) return false
+        if (price != other.price) return false
+        if (isSwitchedOn != other.isSwitchedOn) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = brand.hashCode()
+        result = 31 * result + price.hashCode()
+        result = 31 * result + isSwitchedOn.hashCode()
+        return result
+    }
+
+
 }
